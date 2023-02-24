@@ -1,7 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
+
+    let navigate=useNavigate();
+
+    const routeChange=()=>{
+        let path='';
+        navigate(path);
+    }
+
     return (
         <>
             <div className='container'>
