@@ -6,15 +6,15 @@ const Main = () => {
         <>
             <div className='container'>
                 <div className='button'>
-                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-success">Adicionar Membro</button>
                 </div><br/>
                 <table class="table table-success table-striped">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Apelido</th>
+                            <th scope="col">Tarefa</th>
                         </tr>
                     </thead>
                     <tbody>
