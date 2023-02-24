@@ -17,7 +17,7 @@ function EditMember() {
     const handleSubmit = event => {
         event.preventDefault();
 
-        axios.put(`${API_URL}users/${props.match.params.id}`, { name, email })
+        axios.put(`${API_URL}updateMember/${props.match.params.id}`, { name, email })
             .then(response => {
                 console.log(response.data);
             });
