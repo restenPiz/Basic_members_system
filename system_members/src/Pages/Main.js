@@ -7,7 +7,7 @@ const Main = () => {
     let navigate=useNavigate();
 
     const routeChange=()=>{
-        let path='';
+        let path='addMember';
         navigate(path);
     }
 
@@ -15,7 +15,7 @@ const Main = () => {
         <>
             <div className='container'>
                 <div className='button'>
-                    <button type="button" class="btn btn-success">Adicionar Membro</button>
+                    <button onClick={routeChange} type="button" class="btn btn-success">Adicionar Membro</button>
                 </div><br/>
                 <table class="table table-success table-striped">
                     <thead>
