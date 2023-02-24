@@ -1,7 +1,10 @@
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+
 function addMember() {
     return (
         <>
-            <div classNameName="container">
+            <div className="container">
                 <form>
                     <div className="mb-3">
                         <label for="exampleInputEmail1" className="form-label">Email address</label>
