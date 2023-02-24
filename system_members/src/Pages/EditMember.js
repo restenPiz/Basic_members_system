@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function EditMember() {
+const API_URL = 'http://localhost:8000/api/';
+
+function EditMember(props) {
 
     const [Name, setName] = useState('');
     const [Surname, setSurname] = useState('');
@@ -10,7 +12,9 @@ function EditMember() {
     useEffect(() => {
         axios.get(`${API_URL}allMember/${props.match.params.id}`)
             .then(response => {
-                setUsers(response.data);
+                setName(response.data.Name);
+                setSurname(response.data.Surname);
+                setTask(response.data.Task);
             });
     }, [props.match.params.id]);
 
