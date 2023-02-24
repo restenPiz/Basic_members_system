@@ -6,12 +6,21 @@ import axios from 'axios';
 const API_URL = 'http://127.0.0.1:8000/api/';
 
 const Main = () => {
-    
-    const estilos={
+
+    const estilos = {
         textDecoration: "none",
-        color:"white",
-        listStyleType:"none",
+        color: "white",
+        listStyleType: "none",
     }
+
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        axios.get(`${API_URL}allMember/`)
+            .then(response => {
+                setUsers(response.data);
+            });
+    }, []);
 
     return (
         <>
@@ -20,7 +29,7 @@ const Main = () => {
                     <button type="button" class="btn btn-success">
                         <a style={estilos} href="/AddMember">Adicionar Membro</a>
                     </button>
-                </div><br/>
+                </div><br />
                 <table class="table table-success table-striped">
                     <thead>
                         <tr>
@@ -32,13 +41,15 @@ const Main = () => {
                         </tr>
                     </thead>
                     <tbody>
+                        {users.map(user => (
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope="row">{user.id}</th>
+                            <td>{user.Name}</td>
+                            <td>{user.Surname}</td>
+                            <td>{user.Task}</td>
                             <td></td>
                         </tr>
+                        ))}
                     </tbody>
                 </table>
             </div>
