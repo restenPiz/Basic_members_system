@@ -1,11 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
 import React, { useState } from 'react';
 import axios from 'axios';
-
 const API_URL = 'http://127.0.0.1:8000/api/';
 
-function addMember() {
+function AddMember() {
 
     const [Name, setName] = useState('');
     const [Surname, setSurname] = useState('');
@@ -14,7 +12,7 @@ function addMember() {
     const handleSubmit = event => {
         event.preventDefault();
 
-        axios.post(`${API_URL}addMember/`, { Name, Surname, Task })
+        axios.post(`${API_URL}storeMember/`, { Name, Surname, Task })
             .then(response => {
                 console.log(response.data);
             });
@@ -23,7 +21,7 @@ function addMember() {
     return (
         <>
             <div className="container">
-                <form onSubmit={handleSubmit}>
+                <form action={handleSubmit}>
                     <div className="mb-3">
                         <label for="exampleInputEmail1" className="form-label">Nome</label>
                         <input type="text" className="form-control" value={Name} onChange={event => setName(event.target.value)} placeholder="Preencha com seu nome" />
@@ -36,11 +34,11 @@ function addMember() {
                         <label for="exampleInputPassword1" className="form-label">Tarefa</label>
                         <input type="text" className="form-control" value={Task} onChange={event => setTask(event.target.value)} placeholder="Preencha com suas tarefas" />
                     </div>
-                    <button type="submit" className="btn btn-primary">Adicionar</button>
+                    <button type="submit" name="submit" className="btn btn-primary">Adicionar</button>
                 </form>
             </div>
         </>
     );
 }
 
-export default addMember;
+export default AddMember;
