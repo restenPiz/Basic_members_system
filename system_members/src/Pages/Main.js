@@ -15,6 +15,7 @@ const Main = () => {
                             <th scope="col">Nome</th>
                             <th scope="col">Apelido</th>
                             <th scope="col">Tarefa</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -23,17 +24,7 @@ const Main = () => {
                             <td>Mark</td>
                             <td>Otto</td>
                             <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td colspan="2">Larry the Bird</td>
-                            <td>@twitter</td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
