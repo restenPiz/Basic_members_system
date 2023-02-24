@@ -7,7 +7,7 @@ function Web() {
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/Main" element={<Main />} />
+                    <Route path="/" element={<Main />} />
                     <Route path="/AddMember" element={<AddMember />} />
                 </Routes>
             </BrowserRouter>
