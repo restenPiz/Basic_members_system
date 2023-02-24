@@ -12,7 +12,7 @@ const Main = () => {
 
     const estilos = {
         textDecoration: "none",
-        color: "white",
+        color: "black",
         listStyleType: "none",
     }
 
