@@ -6,9 +6,8 @@ function App() {
   return (
     <>
       <br/>
-      <Index/>
       <Web/>
-
+      <Index/>
     </>
   );
 }

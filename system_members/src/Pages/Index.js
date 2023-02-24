@@ -18,7 +18,7 @@ function Index() {
             <div className="container" style={div}>
 
                 <button type="button" class="btn btn-success">
-                    <a style={estilos} href="/">Inicio</a>
+                    <a style={estilos} href="/Main">Inicio</a>
                 </button><br /><br />
 
                 <button type="button" class="btn btn-success">
