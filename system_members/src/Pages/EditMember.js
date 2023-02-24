@@ -10,7 +10,7 @@ function EditMember(props) {
     const [Task, setTask] = useState('');
 
     useEffect(() => {
-        axios.get(`${API_URL}allMember/${props.match.params.id}`)
+        axios.get(`${API_URL}editMember/${props.match.params.id}`)
             .then(response => {
                 setName(response.data.Name);
                 setSurname(response.data.Surname);

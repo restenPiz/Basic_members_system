@@ -52,7 +52,7 @@ const Main = (props) => {
                                 <td>{user.Surname}</td>
                                 <td>{user.Task}</td>
                                 <td>
-                                    <a style={estilos} href="/EditMember">
+                                    <a style={estilos} href={`/EditMember/${user.id}`}>
                                         <i class="bi bi-pencil"></i>
                                     </a>
                                 </td>
