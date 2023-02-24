@@ -7,7 +7,7 @@ const Main = () => {
             <div className='container'>
                 <div className='button'>
                     <button type="button" class="btn btn-success">Success</button>
-                </div>
+                </div><br/>
                 <table class="table table-success table-striped">
                     <thead>
                         <tr>
