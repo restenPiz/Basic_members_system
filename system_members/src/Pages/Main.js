@@ -52,7 +52,7 @@ const Main = () => {
                                 <td>{user.Surname}</td>
                                 <td>{user.Task}</td>
                                 <td>
-                                    <a style={estilos} href="">
+                                    <a style={estilos} href="/EditMember">
                                         <i class="bi bi-pencil"></i>
                                     </a>
                                 </td>
