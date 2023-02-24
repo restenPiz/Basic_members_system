@@ -52,10 +52,14 @@ const Main = () => {
                                 <td>{user.Surname}</td>
                                 <td>{user.Task}</td>
                                 <td>
-                                    <i class="bi bi-trash3"></i>
+                                    <a style={estilos} href="">
+                                        <i class="bi bi-trash3"></i>
+                                    </a>
                                 </td>
                                 <td>
-                                    <i class="bi bi-pencil"></i>
+                                    <a style={estilos} href="">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
                                 </td>
                             </tr>
                         ))}
