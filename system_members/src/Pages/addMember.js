@@ -1,6 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import React,{useState} from 'react';
+import axios from 'axios';
+
+const API_URL = 'http://127.0.0.1:8000/api/addMember';
 
 function addMember() {
     return (
