@@ -9,13 +9,16 @@ function Index() {
         color:"white",
         listStyleType:"none",
     }
+    const div={
+        marginTop:"18rem",
+    }
 
     return (
         <>
-            <div className="container">
+            <div className="container" style={div}>
 
                 <button type="button" class="btn btn-success">
-                    <a style={estilos} href="/AddMember">Adicionar Membro</a>
+                    <a style={estilos} href="/">Inicio</a>
                 </button><br /><br />
 
                 <button type="button" class="btn btn-success">
