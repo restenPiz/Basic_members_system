@@ -1,18 +1,13 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Index from './Pages/Index';
 import Main from './Pages/Main';
-import addMember from './Pages/addMember';
+import Web from './Pages/Web';
 
 function App() {
   return (
     <>
       <br/>
-      <Main/>
-
-      <BrowserRouter>
-        <Routes>
-          <Route path="/addMember" element={<addMember/>}/>
-        </Routes>
-      </BrowserRouter>
+      <Index/>
+      <Web/>
 
     </>
   );

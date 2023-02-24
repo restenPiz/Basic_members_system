@@ -8,7 +8,7 @@ const Main = () => {
             <div className='container'>
                 <div className='button'>
                     <button type="button" class="btn btn-success">
-                        <a href="/addMember">Adicionar Membro</a>
+                        <a href="/AddMember">Adicionar Membro</a>
                     </button>
                 </div><br/>
                 <table class="table table-success table-striped">
