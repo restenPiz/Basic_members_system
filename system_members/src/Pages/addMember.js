@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8000/api/addMember';
+const API_URL = 'http://127.0.0.1:8000/api/';
 
 function addMember() {
 
@@ -14,7 +14,7 @@ function addMember() {
     const handleSubmit = event => {
         event.preventDefault();
 
-        axios.post(`${API_URL}users/`, { Name, Surname, Task })
+        axios.post(`${API_URL}addMember/`, { Name, Surname, Task })
             .then(response => {
                 console.log(response.data);
             });
