@@ -7,19 +7,18 @@ function addMember() {
             <div className="container">
                 <form>
                     <div className="mb-3">
-                        <label for="exampleInputEmail1" className="form-label">Email address</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                        <label for="exampleInputEmail1" className="form-label">Nome</label>
+                        <input type="text" className="form-control" id="exampleInputEmail1" placeholder="Preencha com seu nome"/>
                     </div>
                     <div className="mb-3">
-                        <label for="exampleInputPassword1" className="form-label">Password</label>
-                        <input type="password" className="form-control" id="exampleInputPassword1"/>
+                        <label for="exampleInputPassword1" className="form-label">Apelido</label>
+                        <input type="surname" className="form-control" id="exampleInputPassword1" placeholder="Preencha com seu apelido"/>
                     </div>
-                    <div className="mb-3 form-check">
-                        <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                            <label className="form-check-label" for="exampleCheck1">Check me out</label>
+                    <div className="mb-3">
+                        <label for="exampleInputPassword1" className="form-label">Tarefa</label>
+                        <input type="text" className="form-control" id="exampleInputPassword1"placeholder="Preencha com suas tarefas"/>
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary">Adicionar</button>
                 </form>
             </div>
         </>
