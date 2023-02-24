@@ -1,4 +1,28 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 function EditMember() {
+
+    const [Name, setName] = useState('');
+    const [Surname, setSurname] = useState('');
+    const [Task, setTask] = useState('');
+
+    useEffect(() => {
+        axios.get(`${API_URL}allMember/${props.match.params.id}`)
+            .then(response => {
+                setUsers(response.data);
+            });
+    }, [props.match.params.id]);
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        axios.put(`${API_URL}users/${props.match.params.id}`, { name, email })
+            .then(response => {
+                console.log(response.data);
+            });
+    };
+
     return (
         <>
             <div className="container">
