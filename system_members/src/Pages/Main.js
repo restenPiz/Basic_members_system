@@ -1,21 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import { useNavigate } from 'react-router-dom';
 
 const Main = () => {
-
-    let navigate=useNavigate();
-
-    const routeChange=()=>{
-        let path='addMember';
-        navigate(path);
-    }
 
     return (
         <>
             <div className='container'>
                 <div className='button'>
-                    <button onClick={routeChange} type="button" class="btn btn-success">Adicionar Membro</button>
+                    <button type="button" class="btn btn-success">Adicionar Membro</button>
                 </div><br/>
                 <table class="table table-success table-striped">
                     <thead>
