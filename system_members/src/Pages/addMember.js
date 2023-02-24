@@ -14,7 +14,7 @@ function AddMember() {
 
         axios.post(`${API_URL}storeMember/`, { Name, Surname, Task })
             .then(response => {
-                console.log(response.data);
+                alert(response.data);
             });
     };
 

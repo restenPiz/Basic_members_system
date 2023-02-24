@@ -1,7 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import 'bootstrap-icons/bootstrap-icons.svg';
+import 'bootstrap-icons/font/bootstrap-icons.json';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const API_URL = 'http://127.0.0.1:8000/api/';
 
@@ -38,17 +41,23 @@ const Main = () => {
                             <th scope="col">Apelido</th>
                             <th scope="col">Tarefa</th>
                             <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         {users.map(user => (
-                        <tr>
-                            <th scope="row">{user.id}</th>
-                            <td>{user.Name}</td>
-                            <td>{user.Surname}</td>
-                            <td>{user.Task}</td>
-                            <td></td>
-                        </tr>
+                            <tr>
+                                <th scope="row">{user.id}</th>
+                                <td>{user.Name}</td>
+                                <td>{user.Surname}</td>
+                                <td>{user.Task}</td>
+                                <td>
+                                    <i class="bi bi-trash3"></i>
+                                </td>
+                                <td>
+                                    <i class="bi bi-pencil"></i>
+                                </td>
+                            </tr>
                         ))}
                     </tbody>
                 </table>
