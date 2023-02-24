@@ -8,7 +8,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 const API_URL = 'http://127.0.0.1:8000/api/';
 
-const Main = () => {
+const Main = (props) => {
 
     const estilos = {
         textDecoration: "none",
