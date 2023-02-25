@@ -30,7 +30,7 @@ const Main = (props) => {
             <div className='container'>
                 <div className='button'>
                     <button type="button" class="btn btn-success">
-                        <a style={estilos} href="/AddMember">Adicionar Membro</a>
+                        <a style={estilos} href="/AddMember">Adicionar Membros</a>
                     </button>
                 </div><br />
                 <table class="table table-success table-striped">
