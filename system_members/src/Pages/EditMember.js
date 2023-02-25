@@ -35,7 +35,7 @@ function EditMember(props) {
                     <form onSubmit={handleSubmit}>
                         <div className="mb-3">
                             <label for="exampleInputEmail1" className="form-label">Nome</label>
-                            <input type="text" className="form-control" value={Name} onChange={event => setName(event.target.value)} placeholder="Preencha com seu nome" />
+                            <input type="text" className="form-control" value={Name} onChange={event => setName(event.target.value)} placeholder="Preencha o input com seu primeiro nome" />
                         </div>
                         <div className="mb-3">
                             <label for="exampleInputPassword1" className="form-label">Apelido</label>
