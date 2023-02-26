@@ -28,7 +28,7 @@ const Main = (props) => {
     const handleSubmit = event => {
         event.preventDefault();
 
-        axios.put(`${API_URL}deleteMember/${props.match.params.id}`)
+        axios.get(`${API_URL}deleteMember/${props.match.params.id}`)
             .then(response => {
                 console.log(response.data);
             });
@@ -66,7 +66,7 @@ const Main = (props) => {
                                     </a>
                                 </td>
                                 <td>
-                                    <button type="submit" onClick={handleSubmit}>
+                                    <button onClick={()=>this.delUser(user.id)}>
                                         <i class="bi bi-trash3"></i>
                                     </button>
                                 </td>
