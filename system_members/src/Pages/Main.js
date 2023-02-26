@@ -28,7 +28,7 @@ const Main = (props) => {
     const handleSubmit = event => {
         event.preventDefault();
 
-        axios.put(`${API_URL}updateMember/${props.match.params.id}`, { Name, Surname , Task })
+        axios.put(`${API_URL}deleteMember/${props.match.params.id}`)
             .then(response => {
                 console.log(response.data);
             });
