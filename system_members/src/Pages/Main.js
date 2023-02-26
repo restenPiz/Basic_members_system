@@ -66,7 +66,7 @@ const Main = (props) => {
                                     </a>
                                 </td>
                                 <td>
-                                    <button type="submit" onSubmit={handleSubmit}>
+                                    <button type="submit" onClick={handleSubmit}>
                                         <i class="bi bi-trash3"></i>
                                     </button>
                                 </td>
