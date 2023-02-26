@@ -25,6 +25,15 @@ const Main = (props) => {
             });
     }, []);
 
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        axios.put(`${API_URL}updateMember/${props.match.params.id}`, { Name, Surname , Task })
+            .then(response => {
+                console.log(response.data);
+            });
+    };
+
     return (
         <>
             <div className='container'>
@@ -57,9 +66,9 @@ const Main = (props) => {
                                     </a>
                                 </td>
                                 <td>
-                                    <a style={estilos} href="">
+                                    <button type="submit" onSubmit={handleSubmit}>
                                         <i class="bi bi-trash3"></i>
-                                    </a>
+                                    </button>
                                 </td>
                             </tr>
                         ))}
