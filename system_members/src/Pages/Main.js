@@ -5,6 +5,7 @@ import axios from 'axios';
 import 'bootstrap-icons/bootstrap-icons.svg';
 import 'bootstrap-icons/font/bootstrap-icons.json';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Link } from 'react-router-dom';
 
 const API_URL = 'http://127.0.0.1:8000/api/';
 
@@ -61,9 +62,9 @@ const Main = (props) => {
                                 <td>{user.Surname}</td>
                                 <td>{user.Task}</td>
                                 <td>
-                                    <a style={estilos} href={`/EditMember/${user.id}`}>
+                                    <Link style={estilos} to={{pathname:"/EditMember/"+user.id}}>
                                         <i class="bi bi-pencil"></i>
-                                    </a>
+                                    </Link>
                                 </td>
                                 <td>
                                     <button onClick={()=>this.delUser(user.id)}>
