@@ -11,7 +11,7 @@ function Web() {
                 <Routes>
                     <Route path="/" element={<Main />} />
                     <Route path="/AddMember" element={<AddMember />} />
-                    <Route path="/EditMember" element={<EditMember />} />
+                    <Route path="/EditMember/:id" element={<EditMember />} />
                 </Routes>
             </BrowserRouter>
             {/*Fim das rotas do meu sistema*/}
