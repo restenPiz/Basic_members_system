@@ -23,7 +23,7 @@ function EditMember(props) {
     const handleSubmit = event => {
         event.preventDefault();
 
-        axios.post(`${API_URL}updateMember/${id}`, { Name, Surname, Task })
+        axios.post(`${API_URL}updateMember/${id}`, { Name, Surname, Task, id })
             .then(response => {
                 alert(response.data);
             });
