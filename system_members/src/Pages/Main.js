@@ -53,7 +53,7 @@ const Main = (props) => {
                                 <td>{user.Surname}</td>
                                 <td>{user.Task}</td>
                                 <td>
-                                    <Link style={estilos} to={{pathname:"/EditMember/"+user.id}}>
+                                    <Link style={estilos} to={`/EditMember/${user.id}`}>
                                         <i class="bi bi-pencil"></i>
                                     </Link>
                                 </td>
