@@ -9,7 +9,7 @@ function EditMember(props) {
     const [Name, setName] = useState('');
     const [Surname, setSurname] = useState('');
     const [Task, setTask] = useState('');
-    const {id}=useParams();
+    const [id,setId]=useState('');
 
     useEffect(() => {
         axios.get(`${API_URL}allMember/`+id)
@@ -23,7 +23,7 @@ function EditMember(props) {
     const handleSubmit = event => {
         event.preventDefault();
 
-        axios.put(`${API_URL}updateMember/${props.match.params.id}`, { Name, Surname , Task })
+        axios.put(`${API_URL}updateMember/${props.match.params.id}`, { Name, Surname , Task, id })
             .then(response => {
                 console.log(response.data);
             });
@@ -47,6 +47,7 @@ function EditMember(props) {
                             <label for="exampleInputPassword1" className="form-label">Tarefa</label>
                             <input type="text" className="form-control" value={Task} onChange={event => setTask(event.target.value)} placeholder="Preencha com suas tarefas" />
                         </div>
+                        <input type="hidden" className="form-control" value={id} onChange={event=>setId(event.target.value)}/>
                         <button type="submit" name="submit" className="btn btn-primary">Adicionar</button>
                     </form><br />
                 </div>

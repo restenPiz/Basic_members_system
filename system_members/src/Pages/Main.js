@@ -5,7 +5,7 @@ import axios from 'axios';
 import 'bootstrap-icons/bootstrap-icons.svg';
 import 'bootstrap-icons/font/bootstrap-icons.json';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { Link } from 'react-router-dom';
+import { Link, redirect } from 'react-router-dom';
 
 const API_URL = 'http://127.0.0.1:8000/api/';
 
@@ -25,15 +25,6 @@ const Main = (props) => {
                 setUsers(response.data);
             });
     }, []);
-
-    const handleSubmit = event => {
-        event.preventDefault();
-
-        axios.get(`${API_URL}deleteMember/${props.match.params.id}`)
-            .then(response => {
-                console.log(response.data);
-            });
-    };
 
     return (
         <>
@@ -67,7 +58,7 @@ const Main = (props) => {
                                     </Link>
                                 </td>
                                 <td>
-                                    <button onClick={()=>this.delUser(user.id)}>
+                                    <button onClick="">
                                         <i class="bi bi-trash3"></i>
                                     </button>
                                 </td>
