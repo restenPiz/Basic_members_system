@@ -28,23 +28,18 @@ const Main = (props) => {
             });
     }, []);
 
-    function handleSubmit() {
-        fetch(`${API_URL}deleteMember/${id}`, {
-            method: 'DELETE'
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Data deleted successfully');
-                // Update your state or trigger a re-render of your component
-            })
-            .catch(error => console.error(error));
+    function handleSubmit(id) {
+        axios.delete(`${API_URL}deleteMember/${id}`)
+        .then(response => {
+            setUsers(response.data);
+        });
     }
-    
+
     return (
         <>
             <div className='container'>
                 <div className='button'>
-                    <button type="button" class="btn btn-success">
+                    <button class="btn btn-success">
                         <a style={estilos} href="/AddMember">Adicionar Membros</a>
                     </button>
                 </div><br />
