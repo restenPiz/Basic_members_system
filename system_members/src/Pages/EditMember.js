@@ -47,6 +47,7 @@ function EditMember(props) {
                             <label for="exampleInputPassword1" className="form-label">Tarefa</label>
                             <input type="text" className="form-control" value={Task} onChange={event => setTask(event.target.value)} placeholder="Preencha com suas tarefas" />
                         </div>
+                        <input type="hidden" className="form-control" value={id}/>
                         <button type="submit" name="submit" className="btn btn-primary">Adicionar</button>
                     </form><br />
                 </div>
