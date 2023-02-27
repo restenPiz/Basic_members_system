@@ -6,8 +6,9 @@ import 'bootstrap-icons/bootstrap-icons.svg';
 import 'bootstrap-icons/font/bootstrap-icons.json';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Link, redirect } from 'react-router-dom';
-
+import { useParams } from 'react-router-dom';
 const API_URL = 'http://127.0.0.1:8000/api/';
+
 
 const Main = (props) => {
 
@@ -18,8 +19,8 @@ const Main = (props) => {
     }
 
     const [users, setUsers] = useState([]);
-    const {id} = useParams();
-    
+    const { id } = useParams();
+
     useEffect(() => {
         axios.get(`${API_URL}allMember/`)
             .then(response => {
@@ -27,16 +28,18 @@ const Main = (props) => {
             });
     }, []);
 
-    const handleSubmit = event => {
-        event.preventDefault();
-
-        axios.post(`${API_URL}updateMember/${id}`, { Name, Surname, Task, id })
-            .then(response => {
-                alert(response.data);
-            });
-    };
-
-
+    function handleSubmit() {
+        fetch(`${API_URL}deleteMember/${id}`, {
+            method: 'DELETE'
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Data deleted successfully');
+                // Update your state or trigger a re-render of your component
+            })
+            .catch(error => console.error(error));
+    }
+    
     return (
         <>
             <div className='container'>
@@ -69,7 +72,7 @@ const Main = (props) => {
                                     </Link>
                                 </td>
                                 <td>
-                                    <button onSubmit={handleSubmit}>
+                                    <button onClick={() => handleSubmit(user.id)}>
                                         <i class="bi bi-trash3"></i>
                                     </button>
                                 </td>
