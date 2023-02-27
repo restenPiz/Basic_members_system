@@ -18,13 +18,24 @@ const Main = (props) => {
     }
 
     const [users, setUsers] = useState([]);
-
+    const {id} = useParams();
+    
     useEffect(() => {
         axios.get(`${API_URL}allMember/`)
             .then(response => {
                 setUsers(response.data);
             });
     }, []);
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        axios.post(`${API_URL}updateMember/${id}`, { Name, Surname, Task, id })
+            .then(response => {
+                alert(response.data);
+            });
+    };
+
 
     return (
         <>
@@ -58,7 +69,7 @@ const Main = (props) => {
                                     </Link>
                                 </td>
                                 <td>
-                                    <button onClick="">
+                                    <button onSubmit={handleSubmit}>
                                         <i class="bi bi-trash3"></i>
                                     </button>
                                 </td>
